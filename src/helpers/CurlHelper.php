@@ -1,6 +1,6 @@
 <?php
 
-namespace helpers;
+namespace fabricadesms\helpers;
 
 /**
  * Auxiliary class related to curl functions
@@ -46,7 +46,7 @@ class CurlHelper {
 
         curl_close($ch);
 
-        return $result;
+        return json_decode($result);
     }
 
 }

@@ -1,7 +1,10 @@
 <?php
 
-use \helpers\CurlHelper;
-use \helpers\MessageHelper;
+namespace fabricadesms;
+
+use fabricadesms\helpers\CurlHelper;
+use fabricadesms\helpers\MessageHelper;
+use fabricadesms\exceptions\InvalidConfigurationException;
 
 /**
  * Class Sms
@@ -29,15 +32,18 @@ class Sms {
         $arguments = func_num_args();
 
         if ($arguments != 1) {
-            throw new Exception("Invalid arguments. Use config array");
+            throw new InvalidConfigurationException("Invalid arguments. Use config array");
         } else {
             $this->config = func_get_arg(0);
 
+            if(!is_array($this->config))
+                throw new InvalidConfigurationException("Invalid arguments. Use config array");
+
             if(!array_key_exists('login', $this->config))
-                throw new Exception("Invalid arguments. The config array is missing the 'login' key");
+                throw new InvalidConfigurationException("Invalid arguments. The config array is missing the 'login' key");
 
             if(!array_key_exists('password', $this->config))
-                throw new Exception("Invalid arguments. The config array is missing the 'password' key");
+                throw new InvalidConfigurationException("Invalid arguments. The config array is missing the 'password' key");
         }
     }
 
@@ -58,8 +64,6 @@ class Sms {
                 'numbers' => $number,
             )
         );
-
-        var_dump(self::URL . '?' . $params);exit;
 
         return CurlHelper::send(self::URL . '?' . $params);
     }

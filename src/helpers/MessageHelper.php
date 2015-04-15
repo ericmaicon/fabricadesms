@@ -1,6 +1,6 @@
 <?php
 
-namespace helpers;
+namespace fabricadesms\helpers;
 
 /**
  * Auxiliary class related to message text functions
