@@ -6,7 +6,7 @@
 <a name="about"></a>
 ## About:
 
-This is a simple SDK to consume the [Fabrica de SMS](fabricadesms.com.br) API.
+This is a simple SDK to consume the [Fabrica de SMS](http://fabricadesms.com.br) API.
 
 <a name="usage"></a>
 ## Usage:
