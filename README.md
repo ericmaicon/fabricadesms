@@ -1,4 +1,4 @@
-# Fabrica de SMS SDK integration
+# Fábrica de SMS SDK integration
 
 * [About](#about)
 * [Usage](#usage)
@@ -6,7 +6,7 @@
 <a name="about"></a>
 ## About:
 
-This is a simple SDK to consume the [Fabrica de SMS](http://fabricadesms.com.br) API.
+This is a simple SDK to consume the [Fábrica de SMS](http://fabricadesms.com.br) API.
 
 <a name="usage"></a>
 ## Usage:
