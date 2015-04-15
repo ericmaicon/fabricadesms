@@ -58,7 +58,7 @@ class Sms {
         $params = http_build_query(
             array(
                 'action' => 'sendsms',
-                'lng' => $this->config['login'],
+                'lgn' => $this->config['login'],
                 'pwd' => $this->config['password'],
                 'msg' => MessageHelper::treatMessage($message),
                 'numbers' => $number,
@@ -82,7 +82,7 @@ class Sms {
         $params = http_build_query(
             array(
                 'action' => 'sendsms',
-                'lng' => $this->config['login'],
+                'lgn' => $this->config['login'],
                 'pwd' => $this->config['password'],
                 'msg' => MessageHelper::treatMessage($message),
                 'numbers' => $numbers,
@@ -108,7 +108,7 @@ class Sms {
         $params = http_build_query(
             array(
                 'action' => 'sendsms',
-                'lng' => $this->config['login'],
+                'lgn' => $this->config['login'],
                 'pwd' => $this->config['password'],
                 'jobdate' => $date,
                 'jobtime' => $time,
@@ -128,7 +128,7 @@ class Sms {
         $params = http_build_query(
             array(
                 'action' => 'getbalance',
-                'lng' => $this->config['login'],
+                'lgn' => $this->config['login'],
                 'pwd' => $this->config['password'],
             )
         );

@@ -1,6 +1,7 @@
 {
     "name": "ericmaicon/fabricadesms",
     "description": "SDK to consume the fabricadesms.com.br API",
+    "license": "MIT",
     "authors": [
         {
             "name": "Eric Maicon",
