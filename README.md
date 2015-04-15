@@ -9,7 +9,7 @@
 This is a simple SDK to consume the [Fábrica de SMS](http://fabricadesms.com.br) API.
 
 <a name="usage"></a>
-## Usage:
+## Usage with composer:
 
 ```
 {
