@@ -21,8 +21,6 @@ class MessageHelper {
      * @return string
      */
     public static function treatMessage($message) {
-        $message = str_replace(' ', '+', $message);
-
         return $message;
     }
 

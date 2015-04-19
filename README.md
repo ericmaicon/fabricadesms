@@ -70,7 +70,7 @@ $config = array(
 );
 
 $sms = new fabricadesms\Sms($config);
-$sms->sendMultipleSms(6281818181, 'message here', '24/12/2015', '16:00');
+$sms->scheduleSms(6281818181, 'message here', '24/12/2015', '16:00');
 ```
 
 ### Get Balance
