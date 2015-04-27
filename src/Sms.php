@@ -135,4 +135,46 @@ class Sms {
 
         return CurlHelper::send(self::URL . '?' . $params);
     }
+
+    /**
+     * This method returns the campaign status
+     *
+     * @param $id
+     * @return mixed|string
+     */
+    public function getCampaignStatus($id)
+    {
+        $params = http_build_query(
+            array(
+                'action' => 'GetCampanha',
+                'lgn' => $this->config['login'],
+                'pwd' => $this->config['password'],
+                'idCamp' => $id
+            )
+        );
+
+        return CurlHelper::send(self::URL . '?' . $params);
+    }
+
+    /**
+     * This method returns the response status
+     *
+     * @param $initalDate
+     * @param $finalDate
+     * @return mixed|string
+     */
+    public function getStatus($initalDate, $finalDate)
+    {
+        $params = http_build_query(
+            array(
+                'action' => 'GetResposta',
+                'lgn' => $this->config['login'],
+                'pwd' => $this->config['password'],
+                'dt_ini' => $initalDate,
+                'dt_fim' => $finalDate,
+            )
+        );
+
+        return CurlHelper::send(self::URL . '?' . $params);
+    }
 }

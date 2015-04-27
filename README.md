@@ -86,3 +86,31 @@ $config = array(
 $sms = new fabricadesms\Sms($config);
 $sms->getBalance();
 ```
+
+### Get Campaign Status
+
+```php
+require_once ('vendor/autoload.php');
+
+$config = array(
+  'login' => 'USERNAME',
+  'password' => 'PASSWORD',
+);
+
+$sms = new fabricadesms\Sms($config);
+$sms->getCampaignStatus($campaignId);
+```
+
+### Get Response Status
+
+```php
+require_once ('vendor/autoload.php');
+
+$config = array(
+  'login' => 'USERNAME',
+  'password' => 'PASSWORD',
+);
+
+$sms = new fabricadesms\Sms($config);
+$sms->getStatus('2015-04-01', '2014-05-01');
+```
